@@ -9,7 +9,7 @@ const session = require('express-session');
 const initializePassport = require('./passport-config');
 const methodOverride = require('method-override');
 const MySqlClient = require('./utils/mySqlClient');
-const dbClient = new MySqlClient('localhost', 'root', 'password', 'bonsai');
+const dbClient = new MySqlClient('us-cdbr-east-02.cleardb.com', 'b2e1e42812e8a7', 'e0227388', 'heroku_d3d4371f2621702');
 module.exports = dbClient;
 
 
