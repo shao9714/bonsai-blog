@@ -14,13 +14,13 @@ router
 
 router
   .route('/entry')
-  .get(viewControllers.displayEntryForm)
-  .post(viewControllers.createEntry)
+  .get(authControllers.checkAuthenticated, viewControllers.displayEntryForm)
+  .post(authControllers.checkAuthenticated, viewControllers.createEntry)
 
 router
   .route('/editEntry/:id')
-  .get(viewControllers.displayEditForm)
-  .patch(viewControllers.editEntry);
+  .get(authControllers.checkAuthenticated, viewControllers.displayEditForm)
+  .patch(authControllers.checkAuthenticated, viewControllers.editEntry);
 
 router
   .route('/deleteEntry/:id')

@@ -54,7 +54,7 @@ async function createEntry(req, res) {
     // hardcoded, need to replace with actual img
     const img = "banner2.jpg";
     const linkID = await dbClient.getNewEntryId();
-    const link = linkID[0].AUTO_INCREMENT; 
+    const link = linkID[0].auto_increment; 
     const summary = req.body.summary;
     var entry = req.body.entry;
     entry = entry.replace(/\r?\n/g, '');

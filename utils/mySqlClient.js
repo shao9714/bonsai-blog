@@ -44,7 +44,7 @@ module.exports = class MySqlClient {
     // Queries
     // Generic
     getNewEntryId() {
-        const sql = 'select auto_increment from information_schema.TABLES where TABLE_NAME ="entries" and TABLE_SCHEMA="bonsai"';
+        const sql = 'select auto_increment from information_schema.TABLES where TABLE_NAME ="entries" and TABLE_SCHEMA="heroku_d3d4371f2621702"';
         return this.executeQuery(sql);
     }
 
