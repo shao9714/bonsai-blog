@@ -48,6 +48,6 @@ app.use('/api/v1/entries', entryRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/', viewRouter);
 
-app.listen(8000, function() {
+app.listen(process.env.PORT || 8000, function() {
     console.log("Listening on port 8000!");
 });
