@@ -1,0 +1,130 @@
+body {
+    background: lightgray;
+}
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.1rem;
+}
+.navbar-brand {
+    padding-bottom: 0.4rem;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+}
+.jumbotron {
+    text-align: center;
+    color: white;
+    font-weight: 450;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    height: 200px;
+    background: url("../pic/banner1.jpg");
+    background-size: cover;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.jumbotron p {
+    margin-top: 1rem;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
+}
+.main {
+    height: 100%;
+    position: relative;
+}
+.view {
+    background: white;
+}
+.main .row {
+    margin: auto;
+}
+.blog {
+    border-right: 1px solid gray;
+    padding-top: 3%;
+}
+.side {
+    padding-top: 3%;
+}
+.card {
+    width: 100%;
+    margin-bottom: 3%;
+}
+.card-subtitle {
+    color: #747474;
+}
+.my-img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-img img {
+    transition: transform 0.4s;
+}
+.my-img:hover img {
+    transform: scale(1.05);
+    transform-origin: 50% 50%;
+}
+#creator {
+    color: blue;
+}
+.fa-star {
+    float: right;
+}
+.fa-star:hover {
+    opacity: 0.5;
+    float: right;
+}
+.fa-plus {
+    float: right;
+}
+.fa-plus:hover {
+    opacity: 0.5;
+    float: right;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+}
+.menu {
+    margin-top: 10px;
+    padding-left: 20px; 
+}
+ul.menu {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.footer {
+    position: relative;
+    background-color:#333;
+    width:100%;
+    height:30px;
+    margin-bottom:0px;
+    color: white;
+    line-height:30px;
+    text-align: center;
+}
+.buffer {
+    height: 390px;
+}
+.display-tags {
+    float: right;
+    color: gray;
+}
+.tag:hover {
+    color: black;
+}
+#portal {
+    color: white;
+}
+.getElementById.innerHTML {
+    display: flex;
+}

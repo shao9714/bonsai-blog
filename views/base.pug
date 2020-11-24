@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="与同好一起编写设定，创作新的世界">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script type="text/javascript" src="scripts/home.js"></script>
+    <title>Bonsai盆栽 | 创作你的世界</title>
+</head>
+
+<body onload="init();">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Bonsai 盆栽</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">关于</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account">用户</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto" id="portal">
+                .script 
+                    if user 
+                        document.getElementById('portal').innerHTML 
+                            <li class="nav-item">
+                                <a class="nav-link" href="/account">欢迎! #{user.username}</a>
+                            </li>
+                    else 
+                        document.getElementById('portal').innerHTML
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">登录</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/signup">注册</a>
+                            </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <div class="container">
+            <div class="jumbotron">
+                <p>分享你的世界</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <div class="row view">
+                <div class="blog col-9">
+                    <div class="search" id="search"></div>
+                    .script
+                        if tags 
+                            document.getElementById('search').innerHTML <span>显示搜索标签的结果</span>#{JSON.stringify(tags.tags)}
+                    each item in content
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="/entry/#{item.link}">#{item.title}</a><i class="far fa-star"></i></h5>
+                                <h6 class="card-subtitle mb-2">创建者: <span id="creator">#{item.author}</span></h6>
+                                <span class="card-text">#{item.summary}</span>
+                                <span class="display-tags"><i class="fas fa-tag"></i> 
+                                - var tagsArr = item.tags.split(',');
+                                each tag in tagsArr
+                                    <a href="javascript:void(0)" class="tag" onclick="searchTag('!{tag}');">#{tag} </a>
+                                </span>
+                            </div>
+                        </div>
+                    <div class="buffer"></div>
+                </div>
+                <div class="side col-3">
+                    <div class="md-form mt-0">
+                        <input class="form-control" type="text" placeholder="搜索" aria-label="Search" id="search-box">
+                    </div>
+                    <ul class="menu">
+                        <li>关于Bonsai</li>
+                        <li>联系方式</li>
+                    </ul>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">添加你的世界<a href="/entry"><i class="fas fa-plus"></i></a></h5>
+                        </div>
+                    </div>
+                    <div class="buffer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">alter@2020</section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+</body>
+
+</html>

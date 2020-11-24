@@ -1,0 +1,48 @@
+body {
+    background: lightgray;
+}
+.view {
+    height: 100vh;
+    background: white;
+}
+.main .row {
+    margin: auto;
+}
+.blog {
+    padding-top: 3%;
+    padding-left: 3%;
+    text-align: center;
+    background: url("../pic/banner1.jpg");
+}
+.side {
+    padding-top: 3%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+}
+body {
+    font-family: 'SimSun';
+}
+.footer {
+    position: relative;
+    background-color:#333;
+    width:100%;
+    height:30px;
+    margin-bottom:0px;
+    color: white;
+    line-height:30px;
+    text-align: center;
+}
+.title {
+   color: white;
+   font-weight: 600;
+   font-size: 2rem;
+   padding-top: 290px;
+}
+.side {
+    padding-top: 250px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="与同好一起编写设定，创作新的世界">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/style/create.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/5bea6g9gctan3tkjfb7y3vq2eo150bxuayog49qeqf4lcbj1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <title>Bonsai盆栽 | 创建新的世界</title>
+</head>
+
+<body onload="initCreate();">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Bonsai 盆栽</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">主页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">关于</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/account">用户</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    .script 
+                    if user 
+                        document.getElementById('portal').innerHTML 
+                            <li class="nav-item">
+                                <a class="nav-link" href="/account">欢迎! #{user.username}</a>
+                            </li>
+                    else 
+                        document.getElementById('portal').innerHTML
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">登录</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/signup">注册</a>
+                            </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <div class="container">
+            <form id="entry-data">
+                <input type="text" id="title" placeholder="标题">
+                <input type="text" id="summary" placeholder="简介">
+                <textarea class="tinymce" id="text-editor"></textarea>
+                <h5 id="add-tags-list-holder" class="list-holder"></h5>
+                <input type="text" class="list-input" id="add-tags" placeholder="标签，输入回车键或逗号确认">
+                <input type="button" value="提交" onclick="submitEntry();">
+
+                <input type="file" name="inpFile" id="inpFile"/>
+                <div class="image-preview" id="imagePreview">
+                    <img src="" alt="banner" class="image-preview-img">
+                    <span class="image-preview-default-text">Image Preview</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="container">
+            <h1></h1>
+        </div>
+    </section>
+
+    script.
+        tinymce.init({
+            selector: 'textarea', 
+            language: 'zh_CN', 
+            plugins: 'paste emoticons', 
+            menubar: 'edit', 
+            indent: 'false',
+            toolbar: 'undo redo | styleselect | forecolor | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | paste | pastetext | emoticons',
+        });
+    <script type="text/javascript" src="/scripts/create.js"></script>
+</body>
+
+</html>
