@@ -17,8 +17,6 @@ function signUp() {
         },
         dataType: 'application/json;charset=utf-8',
         complete: function(response) {
-            data = JSON.parse(response.responseText)
-            window.localStorage.token = data.data.token;
             window.location.href = "/login";
         }
     });

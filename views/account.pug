@@ -66,13 +66,6 @@
         <div class="container">
             <div class="row view">
                 <div class="blog col-9">
-                    <div class="search" id="search"></div>
-                    <form action="/logout?_method=DELETE" method="POST">
-                        <button type="submit">Log Out</button>
-                    </form>
-                    .script
-                        if tags 
-                            document.getElementById('search').innerHTML <span>显示搜索标签的结果</span>#{JSON.stringify(tags.tags)}
                     each item in content
                         <div class="card">
                             <div class="card-body">
@@ -86,7 +79,9 @@
                                 </span>
                             </div>
                         </div>
-                    <div class="buffer"></div>
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <button type="submit">Log Out</button>
+                    </form>
                 </div>
                 <div class="side col-3">
                     <div class="md-form mt-0">
