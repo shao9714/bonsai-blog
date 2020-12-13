@@ -92,6 +92,10 @@ body {
 .tag:hover {
     color: black;
 }
-.getElementById.innerHTML {
-    display: flex;
+
+
+@media (min-width: 992px) {
+    .getElementById.innerHTML {
+        display: flex;
+    }
 }
