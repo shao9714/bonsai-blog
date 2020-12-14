@@ -13,13 +13,13 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/scripts/jquery.js"></script>
     <script src="https://cdn.tiny.cloud/1/5bea6g9gctan3tkjfb7y3vq2eo150bxuayog49qeqf4lcbj1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <title>Bonsai盆栽 | 创建新的世界</title>
+    <title>Bonsai | Create new</title>
 </head>
 
 <body onload="initCreate();">
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">Bonsai 盆栽</a>
+            <a class="navbar-brand" href="/">Bonsai</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">主页</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">关于</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/account">用户</a>
+                        <a class="nav-link" href="/account">User</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -41,15 +41,15 @@
                     if user 
                         document.getElementById('portal').innerHTML 
                             <li class="nav-item">
-                                <a class="nav-link" href="/account">欢迎! #{user.username}</a>
+                                <a class="nav-link" href="/account">Welcome! #{user.username}</a>
                             </li>
                     else 
                         document.getElementById('portal').innerHTML
                             <li class="nav-item">
-                                <a class="nav-link" href="/login">登录</a>
+                                <a class="nav-link" href="/login">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/signup">注册</a>
+                                <a class="nav-link" href="/signup">Signup</a>
                             </li>
                 </ul>
             </div>
@@ -63,8 +63,8 @@
                 <input type="text" id="summary" placeholder="简介">
                 <textarea class="tinymce" id="text-editor"></textarea>
                 <h5 id="add-tags-list-holder" class="list-holder"></h5>
-                <input type="text" class="list-input" id="add-tags" placeholder="标签，输入回车键或逗号确认">
-                <input type="button" value="提交" onclick="submitEntry();">
+                <input type="text" class="list-input" id="add-tags" placeholder="Tags, press 'enter' or ',' to confirm">
+                <input type="button" value="Submit" onclick="submitEntry();">
 
                 <input type="file" name="inpFile" id="inpFile"/>
                 <div class="image-preview" id="imagePreview">

@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.tiny.cloud/1/5bea6g9gctan3tkjfb7y3vq2eo150bxuayog49qeqf4lcbj1/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <title>Bonsai盆栽 | #{title}</title>
+    <title>Bonsai | #{title}</title>
 </head>
 
 
 <body onload="initEdit('!{tags}');">
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">Bonsai 盆栽</a>
+            <a class="navbar-brand" href="/">Bonsai</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">主页</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">关于</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/account">用户</a>
+                        <a class="nav-link" href="/account">User</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -41,15 +41,15 @@
                     if user 
                         document.getElementById('portal').innerHTML 
                             <li class="nav-item">
-                                <a class="nav-link" href="/account">欢迎! #{user.username}</a>
+                                <a class="nav-link" href="/account">Welcome! #{user.username}</a>
                             </li>
                     else 
                         document.getElementById('portal').innerHTML
                             <li class="nav-item">
-                                <a class="nav-link" href="/login">登录</a>
+                                <a class="nav-link" href="/login">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/signup">注册</a>
+                                <a class="nav-link" href="/signup">Signup</a>
                             </li>
                 </ul>
             </div>
@@ -63,8 +63,8 @@
                 <input type="text" id="summary" value="#{summary}">
                 <textarea class="tinymce" id="text-editor"></textarea>
                 <h5 id="add-tags-list-holder" class="list-holder"></h5>
-                <input type="text" class="list-input" id="add-tags" placeholder="标签，输入回车键确认">
-                <input type="button" value="提交" onclick="editEntry('!{id}');">
+                <input type="text" class="list-input" id="add-tags" placeholder="Tags, press 'enter' or ',' to confirm ">
+                <input type="button" value="Submit" onclick="editEntry('!{id}');">
             </form>
         </div>
     </section>
