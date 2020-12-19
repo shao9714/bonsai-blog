@@ -17,15 +17,18 @@ async function getHomePage(req, res, next) {
 async function getEntry(req, res) {
     var id = req.url.substring(7, req.url.length);
     const content = await dbClient.getEntry(id);
+    var perm = false;
 
     let user;
     if (req.user) {
         var l = await req.user.then(
             result => user = result[0]);
-
+    }
+    if (user && user.id === content[0].user_id) {
+        perm = true;
     }
 
-    res.status(200).render('post', { content: content, user: user });
+    res.status(200).render('post', { content: content, user: user, perm: perm });
 }
 
 async function displayEntryForm(req, res) {

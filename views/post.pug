@@ -62,8 +62,10 @@
             <div class="row view">
                 <div class="blog col-9">
                     <h1 class="entry-title" id="title">#{content[0].title}</h1>
-                    <a href="/editEntry/#{content[0].link}"><i class="fas fa-cog entry-edit"></i></a>
-                    <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt entry-edit"></i></a>
+                    .script 
+                        if perm
+                            <a href="/editEntry/#{content[0].link}"><i class="fas fa-cog entry-edit"></i></a>
+                            <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt entry-edit"></i></a>
                     <div class="display-tags"><i class="fas fa-tag"></i> 
                     - var tagsArr = content[0].tags.split(',');
                     each tag in tagsArr

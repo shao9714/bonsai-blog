@@ -24,7 +24,7 @@ router
 
 router
   .route('/deleteEntry/:id')
-  .delete(viewControllers.deleteEntry);
+  .delete(authControllers.checkAuthenticated, viewControllers.deleteEntry);
 
 router
   .route('/search')

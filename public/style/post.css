@@ -76,7 +76,7 @@ hr {
     margin-right: 3%;
     padding-bottom: 5%;
 }
-.fa-cog:before {
+.script .fa-cog:before {
     content: "\f013";
     padding-right: 1.5rem;
 }

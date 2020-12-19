@@ -40,7 +40,31 @@ function checkNotAuthenticated(req, res, next) {
     next();
 }
 
+async function checkEditPerms(req, res, next) {
+    const user = req.session.passport.user;
+    const entry_id = req.path.substring(11);
+    const entry = await dbClient.getEntry(entry_id);
+    if (entry[0].user_id !== user) {
+       
+    }
+
+    next();
+}
+
+async function checkDeletePerms(req, res, next) {
+    const user = req.session.passport.user;
+    const entry_id = req.path.substring(11);
+    const entry = await dbClient.getEntry(entry_id);
+    if (entry[0].user_id !== user) {
+      
+    }
+
+    next();
+}
+
 exports.signup = signup;
 exports.logout = logout;
 exports.checkAuthenticated = checkAuthenticated;
 exports.checkNotAuthenticated = checkNotAuthenticated;
+exports.checkEditPerms = checkEditPerms;
+exports.checkDeletePerms = checkDeletePerms;
