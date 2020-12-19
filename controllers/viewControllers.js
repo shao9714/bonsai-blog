@@ -162,7 +162,7 @@ async function getSignup(req, res) {
 }
 
 async function getLogin(req, res) {
-    res.status(200).render('login');
+    res.status(200).render('login', {message: req.flash("error")});
 }
 
 exports.getHomePage = getHomePage;

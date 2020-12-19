@@ -23,7 +23,8 @@ create table if not exists entries (
     tags text,
     user_id bigint(20) not null,
     primary key (id),
-    foreign key (user_id) references users(id)
+    foreign key (user_id) references users(id),
+    ON DELETE CASCADE 
 );
 
 create table if not exists user_entries (

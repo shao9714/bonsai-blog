@@ -1,5 +1,6 @@
 body {
     background: lightgray;
+    font-family: 'SimSun';
 }
 .navbar {
     padding-top: 0;
@@ -69,7 +70,7 @@ body {
     transform-origin: 50% 50%;
 }
 #creator {
-    color: blue;
+    /* color: blue; */
 }
 .fa-star {
     float: right;
